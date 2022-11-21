@@ -14,7 +14,15 @@
       <p>{{ outputGoal() }}</p>
       <p v-html="boldCourseGoalA"></p>
     </section>
+
+    <section id="events">
+      <h2>Events in Action</h2>
+      <button v-on:click="counter++">Add</button>
+      <button v-on:click="counter--">Reduce</button>
+      <p>Result: {{ counter }}</p>
+    </section>
   </body>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="app.js"></script>
+  <script src="app-event.js"></script>
 </html>
