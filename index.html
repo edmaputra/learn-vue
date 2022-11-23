@@ -20,6 +20,12 @@
       <button v-on:click="increment(5)">Add 5</button>
       <button v-on:click="decrement(5)">Reduce 5</button>
       <p>Result: {{ counter }}</p>
+
+      <input type="text" v-on:input="setName">
+      <p>Your name: {{ n }}</p>
+
+      <input type="text" v-on:input="setFullName($event, 'Saputra')">
+      <p>Full name: {{ fullName }}</p>
     </section>
   </body>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
