@@ -28,6 +28,13 @@ Vue.createApp({
     },
     resetInput() {
       this.fullName = ''
+    },
+    outputFullName() {
+      console.log("running again...")
+      if (this.fullName === '') {
+        return '';
+      }
+      return this.fullName + ' ' + 'Saputra';
     }
   }
 }).mount("#events");
