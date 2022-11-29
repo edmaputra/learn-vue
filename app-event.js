@@ -7,6 +7,15 @@ Vue.createApp({
       confirmedName: ''
     };
   },
+  computed: {
+    nameFull() {
+      console.log("running again...")
+      if (this.fullName === '') {
+        return '';
+      }
+      return this.fullName + ' ' + 'Saputra';
+    }
+  },
   methods: {
     increment(num) {
       this.counter = this.counter + num;
