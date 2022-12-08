@@ -27,9 +27,14 @@
       <p>Confirmed name: {{ confirmedName }}</p>
       
 
-      <input type="text" v-model="fullName">
+      <input type="text" v-model="fullName" placeholder="First Name">
+      <input type="text" v-model="fullName" placeholder="Last Name">
+      
       <p>Full name: {{ nameFull }}</p>
-      <button v-on:click="resetInput()">Reset Input</button>
+      <!-- <button v-on:click="resetInput()">Reset Input</button> -->
+      <button @click="resetInput()">Reset Input</button>
+      <!-- v:bind -> :(colon) -->
+
 
       <form v-on:submit.prevent="submitForm">
         <input type="text">
