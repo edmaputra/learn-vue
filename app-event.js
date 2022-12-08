@@ -7,6 +7,12 @@ Vue.createApp({
       confirmedName: ''
     };
   },
+  watch: {
+    // fullName(oldValue, newValue) {
+    fullName(value) {
+      this.counter = 1000
+    }
+  },
   computed: {
     nameFull() {
       console.log("running again...")
