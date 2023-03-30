@@ -22,13 +22,13 @@
       <button @click="addGoal">Add Goal</button>
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
       <ul v-else>
-        <li v-for="(goal, idx) in goals">{{idx}} - {{goal}}</li>
+        <li v-for="(goal, index) in goals" @click="removeGoal(index)">{{goal}}</li>
       </ul>
 
       <!-- Iterating the value of object -->
-      <ul>
+      <!-- <ul>
         <li v-for="(value, key, index) in {name:'bangun', age: 33}">{{index}}-{{key}}: {{value}}</li>
-      </ul>
+      </ul> -->
 
       <!-- v-else-if example
       <ul v-else-if=".....">
