@@ -20,9 +20,9 @@
       <h2>My course goals</h2>
       <input type="text" v-model="goalValue" />
       <button @click="addGoal">Add Goal</button>
-      <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p>
-      <ul v-v-show="goals.length > 0">
-        <li>Goal</li>
+      <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
+      <ul v-else>
+        <li v-for="goal in goals">{{goal}}</li>
       </ul>
       <!-- v-else-if example
       <ul v-else-if=".....">
